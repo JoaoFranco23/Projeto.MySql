@@ -1,0 +1,96 @@
+create database Municipio; #Criando uma Coluna Para o Banco de Dados
+
+#Criando a Tabela do Banco de Dados
+create table Cidade(
+Id int auto_increment,
+Cidade varchar(100) not null,
+Estado varchar(2) not null,
+Cep int,
+Habitantes int,
+Codigo_IBGE int,
+primary key(Id, Cep, Habitantes, Codigo_IBGE)
+);
+
+#Selecionando a Tabela do Banco 
+select * from cidade;
+
+#Comando pra Inserir na Tabela do banco criado
+insert into cidade (Id, cidade, Estado, Cep, Habitantes, Codigo_IBGE) values ('1', 'Adamantina', 'SP', '17800000', '35111', '3500105');
+insert into cidade (Id, cidade, Estado, Cep, Habitantes, Codigo_IBGE) values ('2', 'Álvares Machado', 'SP', '19160000', '24998', '3501301');
+insert into cidade (Id, cidade, Estado, Cep, Habitantes, Codigo_IBGE) values ('3', 'Americana', 'Sp', '', '242018', '3501608');
+insert into cidade (Id, cidade, Estado, Cep, Habitantes, Codigo_IBGE) values ('4', 'Aparecida', 'SP', '', '36185', '3502507');
+insert into cidade (Id, cidade, Estado, Cep, Habitantes, Codigo_IBGE) values ('5', 'Aparecida do Oeste', 'SP', '15735000', '4158', '3502606');
+insert into cidade (Id, cidade, Estado, Cep, Habitantes, Codigo_IBGE) values ('6', 'Araçatuba', 'SP', '', '198129', '3502804');
+insert into cidade (Id, cidade, Estado, Cep, Habitantes, Codigo_IBGE) values ('7', 'Assis', 'SP', '', '105087', '3504008');
+insert into cidade (Id, cidade, Estado, Cep, Habitantes, Codigo_IBGE) values ('8', 'Campos do Jordão', 'SP', '18273420', '52405', '3509700');
+insert into cidade (Id, cidade, Estado, Cep, Habitantes, Codigo_IBGE) values ('9', 'Botucatu', 'SP', '', '148130', '3507506');
+insert into cidade (Id, cidade, Estado, Cep, Habitantes, Codigo_IBGE) values ('10', 'José Bonifácio', 'SP', '15200000', '37366', '3525706');
+insert into cidade (Id, cidade, Estado, Cep, Habitantes, Codigo_IBGE) values ('11', 'Alto Araguaia', 'MT', '78780000', '19385', '5100300');
+insert into cidade (Id, cidade, Estado, Cep, Habitantes, Codigo_IBGE) values ('12', 'Araguaiana', 'MT', '78685000', '3109', '5101001');
+insert into cidade (Id, cidade, Estado, Cep, Habitantes, Codigo_IBGE) values ('13', 'Aripuanã', 'MT', '78325000', '22714', '5101407');
+insert into cidade (Id, cidade, Estado, Cep, Habitantes, Codigo_IBGE) values ('14', 'Cáceres', 'MT', '', '94861', '5102504');
+insert into cidade (Id, cidade, Estado, Cep, Habitantes, Codigo_IBGE) values ('15', 'Cuiabá', 'MT', '', '618124', '5103403');
+insert into cidade (Id, cidade, Estado, Cep, Habitantes, Codigo_IBGE) values ('16', 'Diamantino', 'MT', '', '22178', '5103502');
+insert into cidade (Id, cidade, Estado, Cep, Habitantes, Codigo_IBGE) values ('17', 'Figueirópolis do Oeste', 'MT', '78290000', '3452', '5103809');
+insert into cidade (Id, cidade, Estado, Cep, Habitantes, Codigo_IBGE) values ('18', 'Gaúcha do Norte', 'MT', '78875000', '7782', '5103858');
+insert into cidade (Id, cidade, Estado, Cep, Habitantes, Codigo_IBGE) values ('19', 'Itiquira', 'MT', '78790000', '13552', '5104609');
+insert into cidade (Id, cidade, Estado, Cep, Habitantes, Codigo_IBGE) values ('20', 'Juína', 'MT', '', '41101', '5105150');
+insert into cidade (Id, cidade, Estado, Cep, Habitantes, Codigo_IBGE) values ('21', 'Abaeté', 'MG', '', '23250', '3100203');
+insert into cidade (Id, cidade, Estado, Cep, Habitantes, Codigo_IBGE) values ('22', 'Alvorada de Minas', 'MG', '39140000', '3605', '3102407');
+insert into cidade (Id, cidade, Estado, Cep, Habitantes, Codigo_IBGE) values ('23', 'Almenara', 'MG', '39900000', '42143', '3101706');
+insert into cidade (Id, cidade, Estado, Cep, Habitantes, Codigo_IBGE) values ('24', 'Alpinópolis', 'MG', '37940000', '1000', '3101904');
+insert into cidade (Id, cidade, Estado, Cep, Habitantes, Codigo_IBGE) values ('25', 'Alto Jequitibá', 'MG', '36976000', '8301', '3153509');
+insert into cidade (Id, cidade, Estado, Cep, Habitantes, Codigo_IBGE) values ('26', 'Alto Rio Doce', 'MG', '36260000', '10723', '3102100');
+insert into cidade (Id, cidade, Estado, Cep, Habitantes, Codigo_IBGE) values ('27', 'Alvarenga', 'MG ', '35249000', ' 3783', '3102209');
+insert into cidade (Id, cidade, Estado, Cep, Habitantes, Codigo_IBGE) values ('28', 'Andrelândia', 'MG', '37300000', '12189', '3102803');
+insert into cidade (Id, cidade, Estado, Cep, Habitantes, Codigo_IBGE) values ('29', 'Araçuaí', 'MG', '39600000', '36712', '3103405');
+insert into cidade (Id, cidade, Estado, Cep, Habitantes, Codigo_IBGE) values ('30', 'Alagoa', 'MG', '37458000', '161555', '3101300');
+insert into cidade (Id, cidade, Estado, Cep, Habitantes, Codigo_IBGE) values ('31', 'Alvorada do Sul', 'PR', '86150000', '11503', '4100806');
+insert into cidade (Id, cidade, Estado, Cep, Habitantes, Codigo_IBGE) values ('32', 'Londrina', 'PR', '', '575377', '4113700');
+insert into cidade (Id, cidade, Estado, Cep, Habitantes, Codigo_IBGE) values ('33', 'Curitiba', 'PR', '', '1963726', '4106902');
+insert into cidade (Id, cidade, Estado, Cep, Habitantes, Codigo_IBGE) values ('34', 'Ponta Grossa', 'PR', '', '358838', '4119905');
+insert into cidade (Id, cidade, Estado, Cep, Habitantes, Codigo_IBGE) values ('35', 'Foz do Iguaçu', 'PR', '', '257971', '4108304');
+insert into cidade (Id, cidade, Estado, Cep, Habitantes, Codigo_IBGE) values ('36', 'Apucarana', 'PR', '', '137438', '4101408');
+insert into cidade (Id, cidade, Estado, Cep, Habitantes, Codigo_IBGE) values ('37', 'Cambé', 'PR', '', '108126', '4103701');
+insert into cidade (Id, cidade, Estado, Cep, Habitantes, Codigo_IBGE) values ('38', 'Cascavel', 'PR', '', '332333', '4104808');
+insert into cidade (Id, cidade, Estado, Cep, Habitantes, Codigo_IBGE) values ('39', 'Catanduvas', 'PR', '85470000', '10167', '4105003');
+insert into cidade (Id, cidade, Estado, Cep, Habitantes, Codigo_IBGE) values ('40', 'Maringá', 'PR', '', '436472', '4115200');
+insert into cidade (Id, cidade, Estado, Cep, Habitantes, Codigo_IBGE) values ('41', 'Chapecó', 'SC', '', '224013', '4204202');
+insert into cidade (Id, cidade, Estado, Cep, Habitantes, Codigo_IBGE) values ('42', 'Cocal do Sul', 'SC', '88845000', '16821', '4204251');
+insert into cidade (Id, cidade, Estado, Cep, Habitantes, Codigo_IBGE) values ('43', 'Florianópolis', 'SC', '', '508826', '4205407');
+insert into cidade (Id, cidade, Estado, Cep, Habitantes, Codigo_IBGE) values ('44', 'Iporã do Oeste', 'SC', '89899000', '9045', '4207650');
+insert into cidade (Id, cidade, Estado, Cep, Habitantes, Codigo_IBGE) values ('45', 'Itajaí', 'SC', '', '223112', '4208203');
+insert into cidade (Id, cidade, Estado, Cep, Habitantes, Codigo_IBGE) values ('46', 'Itapoá', 'SC', '', '21177', '4208450');
+insert into cidade (Id, cidade, Estado, Cep, Habitantes, Codigo_IBGE) values ('47', 'Jacinto Machado', 'SC', '88950000', '10376', '4208708');
+insert into cidade (Id, cidade, Estado, Cep, Habitantes, Codigo_IBGE) values ('48', 'Joinville', 'SC', '', '597658', '4209102');
+insert into cidade (Id, cidade, Estado, Cep, Habitantes, Codigo_IBGE) values ('49', 'Lages', 'SC', '', '157349', '4209300');
+insert into cidade (Id, cidade, Estado, Cep, Habitantes, Codigo_IBGE) values ('50', 'Laguna', 'SC', '', '46122', '4209409');
+
+drop table cidade;
+
+#Alterar a tabela
+update cidade set Cep = '15735000' where Id = '5';
+
+update cidade set Cidade = 'Alvorada do Sul', Estado = 'PR', Cep = '86150000', Habitantes = '11503', Codigo_IBGE = '4100806' where Id = '31'; 
+
+#Consultar a lista de 10 paises com a maior população
+select Cidade, Habitantes from cidade order by Habitantes limit 10, 1;
+select Id, Cidade, Habitantes from cidade order by Habitantes desc limit 10;
+select Id, Cidade, Habitantes from cidade order by Habitantes limit 10;
+
+#Consultar a lista que Termina com a Determinada Letra
+select distinct Cidade from cidade where cidade like'%ul';
+select distinct Cidade from cidade where cidade like'%e';
+
+#Consultando a Lista Proxima de 10 Linhas após as 5 primeiras linhas na Tabela Country
+select * from cidade limit 10,5;
+select * from cidade limit 10, 5;
+select * from cidade limit 10, 15;
+
+#Consultando os Municipios Com Maior Indice de Habitantes
+select Id, Cidade, Habitantes from cidade where Habitantes between 1000000 and 2000000;
+select Id, Cidade, Habitantes from cidade where Habitantes >= 1000000 and Habitantes <= 2000000;
+select Id, Cidade, Habitantes from cidade where Habitantes  > 1000000 and Habitantes < 2000000;
+
+#Avaliar Expressões utilizando select
+select 5/7
