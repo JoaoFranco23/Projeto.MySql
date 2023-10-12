@@ -1,0 +1,28 @@
+create database Agendamento_Medico 
+default character set utf8
+default collate utf8_general_ci;
+
+create table Agend_Medico(
+Nome varchar (30) not null,
+Inscricao int (11) not null,
+Cidade varchar (20) not null,
+Estado varchar (2) not null,
+DDD int (2),
+Tel int (9),
+Sexo enum ('M', 'F'),
+Data_Nasc date,
+Idade int(3) not null,
+Peso decimal (4,2),
+Altura decimal (4,2),
+Nacionalidade varchar(20) default 'Brasil',
+primary key (Inscricao, Idade)
+)default charset = utf8; 
+
+insert into agend_medico (Nome, Inscricao, Cidade, Estado, DDD, Tel, Sexo, Data_Nasc, Idade, Peso, Altura, Nacionalidade) values ('Joao Vitor', '003344701', 'Adamantina', 'SP', '18', '997985900', 'M', '05-02-2000', '22', '63', '1.70', 'Brasileiro');
+insert into agend_medico (Nome, Inscricao, Cidade, Estado, DDD, Tel, Sexo, Data_Nasc, Idade, Peso, Altura, Nacionalidade) values ('Mafalda', '004305002', 'Sao Paulo', 'SP', '11', '981038010', 'F', '2001-02-12', '21', '70', "1.75", 'Brasileira');
+insert into agend_medico (Nome, Inscricao, Cidade, Estado, DDD, Tel, Sexo, Data_Nasc, Idade, Peso, Altura, Nacionalidade) values ('Anderson', '007345103', 'Marilia', 'SP', '14', '987038019', 'M', '1997-01-12', '25', '77', "1.80", 'Brasileiro');
+insert into agend_medico (Nome, Inscricao, Cidade, Estado, DDD, Tel, Sexo, Data_Nasc, Idade, Peso, Altura, Nacionalidade) values ('Carla', '007376143', 'Bauru', 'SP', '14', '997638719', 'F', '1991-12-27', '30', '80', "1.90", 'Brasileira');
+
+UPDATE `agendamento_medico`.`agend_medico` SET `Data_Nasc` = '2000-02-05' WHERE (`Inscricao` = '3344701') and (`Idade` = '22'); 
+
+select Nome, Inscricao, Data_Nasc, Cidade,Idade from agend_medico 
