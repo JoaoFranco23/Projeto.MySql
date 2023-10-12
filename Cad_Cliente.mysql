@@ -1,0 +1,46 @@
+create database cadastro_Geral;
+
+create table Cadastro_Cliente (
+Id int auto_increment,
+Nome_Completo varchar(20) not null,
+Email varchar(50) not null,
+Endereço varchar(20),
+Cidade varchar(50),
+Uf varchar(2),
+Cep int(8),
+Id_Pais tinyint(3) unsigned not null,
+Pais varchar(50) NOT NULL,
+primary key (Id, Cep, Id_Pais)
+)engine=InnoDB  default charset=latin1 auto_increment=253;
+
+select * from cadastro_cliente;
+
+alter table Cadastro_Cliente modify column Id_Pais tinyint(3) unsigned not null after Endereço;
+
+insert into Cadastro_Cliente set Id = '1', Nome_Completo = 'Joao Carlos do Santos', Email = 'joaocarlos90@hotmail.com', Endereço = 'av brasil', Id_Pais = '1', Cidade = 'adamantina', Uf = 'sp', Cep = '17800000', Pais = 'Brasil';
+insert into Cadastro_Cliente set Id = '2', Nome_Completo = 'Mafalda dos Santoas Brasil', Email = 'mafalda30@gmail.com', Endereço = 'Av da Américas', Id_Pais = '2', Cidade = 'alvares Machado', Uf = 'sp', Cep = '19160000', Pais = 'Brasil';
+insert into Cadastro_Cliente set Id = '3', Nome_Completo = 'Junior pereira', Email = 'juniorpe12@hotmail.com', Endereço = 'R sete de Setembro', Id_Pais = '3', Cidade = 'Bauru', Uf = 'sp', Cep = '17015030', Pais = 'brasil';
+insert into Cadastro_Cliente set Id = '4', Nome_Completo = 'Maria santana', Email = 'mariasa23@hotmail.com', Endereço = 'Av Tapuias', Id_Pais = '4', Cidade = 'tupã', Uf = 'sp', Cep = '17600260', Pais = 'Brasil';
+
+create table if not exists Localidade_Cadastro(
+Id tinyint(3) unsigned NOT NULL AUTO_INCREMENT,
+Codigos_Municipal int not null,
+Cidade varchar(50) not null,
+Uf_Estado varchar(2),
+primary key(Id, Codigos_Municipal)
+)engine=InnoDB default charset=utf8 auto_increment=255;
+
+alter table Localidade_Cadastro add column Endereço varchar(20);
+alter table Localidade_Cadastro add column Num int(4) not null;
+alter table Localidade_Cadastro add column Nacionalidade varchar(20) default '';
+
+
+select * from Localidade_Cadastro;
+
+alter table Localidade_Cadastro modify column Endereço varchar(20) after Codigos_Municipal;
+alter table Localidade_Cadastro modify column Num int(4) not null after Endereço;
+alter table Localidade_Cadastro modify column Codigos_Municipal int not null after Uf_Estado;
+
+insert into Localidade_Cadastro(Id, Endereço, Num, Cidade, Uf_Estado, Codigos_Municipal, Nacionalidade) values ('1', 'R.Joaquim Nabuco', '66', 'adamantina', 'sp', '3500105', 'Brasil');
+insert into Localidade_Cadastro(Id, Endereço, Num, Cidade, Uf_Estado, Codigos_Municipal, Nacionalidade) values ('2', 'Brookklyn Ave', '144', 'Nova York', 'EUA', '1347', 'EUA');
+insert into Localidade_Cadastro(Id, Endereço, Num, Cidade, Uf_Estado, Codigos_Municipal, Nacionalidade) values ('3', 'Dundas.st.w', '150', 'toronto', 'atm', '1416', 'Canadá');
