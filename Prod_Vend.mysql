@@ -1,0 +1,107 @@
+create database produto; 
+
+create table Tb_Produtos (
+Id INT AUTO_INCREMENT PRIMARY KEY,
+Nome_Produto varchar(30) not null,
+Descriçao text,
+Id_Pedido int,
+Id_Produto int, 
+Preço float,
+Estoque float,
+Quantidade_Pedidos float,
+Responsavel varchar(150),
+E_Mail varchar(100),
+DDD int(2),
+Tel bigint(14), 
+Cel bigint(9),
+Data_Pedido date,
+Endereço varchar(20),
+Bairro varchar(50),
+Cidade varchar(50),
+Uf varchar(2),
+Cep int(8)
+);
+
+
+select * from tb_produtos;
+select Id, Nome_Produto, Responsavel, Data_Pedido from tb_produtos;
+
+insert into Tb_Produtos (Id, Nome_Produto, Descriçao, Id_Pedido, Id_Produto, Preço, Estoque, Quantidade_Pedidos, Responsavel, E_mail, DDD, Tel, Cel, Data_Pedido, Endereço, Bairro, Cidade, Uf, Cep) values ('1', 'Placa de Vídeo MSI NVIDIA GeForce RTX 2060', 'Marca MSI', '73497142', '2222234', '1600.99', '78', '2', 'Joao Vitor', 'joaovitor.teste123@hotmail.com', '18', '35829066', '997897061', '2022-10-17', 'Joaquin Nabuco', 'Vila Joaquin', 'Adamantina', 'SP', '17800000');
+insert into Tb_Produtos (Id, Nome_Produto, Descriçao, Id_Pedido, Id_Produto, Preço, Estoque, Quantidade_Pedidos, Responsavel, E_mail, DDD, Tel, Cel, Data_Pedido, Endereço, Bairro, Cidade, Uf, Cep) values ('2', 'GTX 1050 2GB, GDDR5, Gigabyte', 'Marca Gigabyte', '78487182', '2728234', '720.80', '40', '2',  '', '', '11', '390329067', '987767071', '', 'Av Paulista', 'Bela Vista', 'São Paulo', 'Sp', '01310930');
+insert into Tb_Produtos (Id, Nome_Produto, Descriçao, Id_Pedido, Id_Produto, Preço, Estoque, Quantidade_Pedidos, Responsavel, E_mail, DDD, Tel, Cel, Data_Pedido, Endereço, Bairro, Cidade, Uf, Cep) values ('3', 'SSD 480 GB Kingston', 'Marca Kingston', '68586193', '3679271', '225.20', '49', '3', 'Carlos', 'carlos.teste33@gmail.com', '14', '', '', '2022-09-23', 'Av Brasil', 'Centro', 'Lucelia', 'SP', '17780000'); 
+insert into Tb_Produtos (Id, Nome_Produto, Descriçao, Id_Pedido, Id_Produto, Preço, Estoque, Quantidade_Pedidos, Responsavel, E_mail, DDD, Tel, Cel, Data_Pedido, Endereço, Bairro, Cidade, Uf, Cep) values ('4', 'Placa Mãe MSI PRO B660M-A, LGA 1700', 'Marca MSI', '79787193', '4779221', '899.50', '8', '1',  '', '', '', '', '', '', '', '', '', '', '');
+insert into Tb_Produtos (Id, Nome_Produto, Descriçao, Id_Pedido, Id_Produto, Preço, Estoque, Quantidade_Pedidos, Responsavel, E_mail, DDD, Tel, Cel, Data_Pedido, Endereço, Bairro, Cidade, Uf, Cep) values ('5', 'Processador Intel Core i9-12900KS, 3.4GHz ', 'Marca Intel', '78384199', '7499527', '4450.99', '28', '1',  '', '', '', '', '', '', '', '', '', '', '');
+insert into Tb_Produtos (Id, Nome_Produto, Descriçao, Id_Pedido, Id_Produto, Preço, Estoque, Quantidade_Pedidos, Responsavel, E_mail, DDD, Tel, Cel, Data_Pedido, Endereço, Bairro, Cidade, Uf, Cep) values ('6', 'Processador Intel Core i9-13900K, 13ª Geração, 5.8GHz Max Turbo', 'Marca Intel', '98989197', '7348526', '4700.99', '30', '2',  '', '', '', '', '', '', '', '', '', '', '');
+insert into Tb_Produtos (Id, Nome_Produto, Descriçao, Id_Pedido, Id_Produto, Preço, Estoque, Quantidade_Pedidos, Responsavel, E_mail, DDD, Tel, Cel, Data_Pedido, Endereço, Bairro, Cidade, Uf, Cep) values ('7', 'Placa Mãe Msi A320m Pro-m2 V2 Socket Am4', 'Maca MSI', '78767223', '4789421', '534.57', '20', '3',  '', '', '', '', '', '', '', '', '', '', '');
+insert into Tb_Produtos (Id, Nome_Produto, Descriçao, Id_Pedido, Id_Produto, Preço, Estoque, Quantidade_Pedidos, Responsavel, E_mail, DDD, Tel, Cel, Data_Pedido, Endereço, Bairro, Cidade, Uf, Cep) values ('8', 'Placa Mãe B360m Pro-vh Msi 1151', 'Marca MSI', '77797224', '4779633', '1300', '20', '2', '', '', '', '', '', '', '', '', '', '', '');
+insert into Tb_Produtos (Id, Nome_Produto, Descriçao, Id_Pedido, Id_Produto, Preço, Estoque, Quantidade_Pedidos, Responsavel, E_mail, DDD, Tel, Cel, Data_Pedido, Endereço, Bairro, Cidade, Uf, Cep) values ('9', 'Kit Upgrade, Processador Amd Ryzen 5 4600g, Placa Mãe Msi A320m-a Pro Max, Memória 8GB DDR4', 'Marca AMD Ryzen', '78898278', '4789838', '1927.19', '30', '2',  '', '', '', '', '', '', '', '', '', '', '');
+insert into Tb_Produtos (Id, Nome_Produto, Descriçao, Id_Pedido, Id_Produto, Preço, Estoque, Quantidade_Pedidos, Responsavel, E_mail, DDD, Tel, Cel, Data_Pedido, Endereço, Bairro, Cidade, Uf, Cep) values ('10', 'Kit Upgrade, Processador Ryzen 5 4600g, Placa Mãe Msi A320m-a Pro Max, Memória 8GB DDR4, SSD 256GB', 'Kit Upgrade AMD', '98798979', '9789898', '2358.38', '30', '2',  '', '', '', '', '', '', '', '', '', '', '');
+insert into Tb_Produtos (Id, Nome_Produto, Descriçao, Id_Pedido, Id_Produto, Preço, Estoque, Quantidade_Pedidos, Responsavel, E_mail, DDD, Tel, Cel, Data_Pedido, Endereço, Bairro, Cidade, Uf, Cep) values ('11', 'Processador AMD Ryzen 7 5800X, 3.8GHz ', 'Marca AMD Ryzen', '17791519', '1769896', '1900.99', '75', '2', '', '', '', '', '', '', '', '', '', '', '');
+insert into Tb_Produtos (Id, Nome_Produto, Descriçao, Id_Pedido, Id_Produto, Preço, Estoque, Quantidade_Pedidos, Responsavel, E_mail, DDD, Tel, Cel, Data_Pedido, Endereço, Bairro, Cidade, Uf, Cep) values ('12', 'SSD 240 GB Kingston A400, SATA, Leitura: 500MB', 'Marca Kingston', '18748474', '17859595', '142.99', '269', '3', '', '', '', '', '', '', '', '', '', '', '');
+insert into Tb_Produtos (Id, Nome_Produto, Descriçao, Id_Pedido, Id_Produto, Preço, Estoque, Quantidade_Pedidos, Responsavel, E_mail, DDD, Tel, Cel, Data_Pedido, Endereço, Bairro, Cidade, Uf, Cep) values ('13', 'Teclado Mecânico Gamer HyperX Alloy MKW100, RGB', 'Marca HyperX', '18191911', '17198191', '269.99', '990', '2', '', '', '', '', '', '', '', '', '', '', '');
+insert into Tb_Produtos (Id, Nome_Produto, Descriçao, Id_Pedido, Id_Produto, Preço, Estoque, Quantidade_Pedidos, Responsavel, E_mail, DDD, Tel, Cel, Data_Pedido, Endereço, Bairro, Cidade, Uf, Cep) values ('14', 'HD Seagate 1TB BarraCuda, 3.5, SATA', 'Marca Seagate', '98798979', '8789797', '239.99', '66', '3', '', '', '', '', '', '', '', '', '', '', '');
+insert into Tb_Produtos (Id, Nome_Produto, Descriçao, Id_Pedido, Id_Produto, Preço, Estoque, Quantidade_Pedidos, Responsavel, E_mail, DDD, Tel, Cel, Data_Pedido, Endereço, Bairro, Cidade, Uf, Cep) values ('15', 'HD 8TB Seagate NAS IronWolf, Sata 3, 7200RPM, Cache 256MB', 'Marca Seagate', '974794974', '9749494', '1720.90', '40', '5',  '', '', '', '', '', '', '', '', '', '', '');
+insert into Tb_Produtos (Id, Nome_Produto, Descriçao, Id_Pedido, Id_Produto, Preço, Estoque, Quantidade_Pedidos, Responsavel, E_mail, DDD, Tel, Cel, Data_Pedido, Endereço, Bairro, Cidade, Uf, Cep) values ('16', 'HD Disco Rígido Seagate Barracuda 1Tb 7200rpm', 'Marca Seagate', '977798974', '0789798', '282.51', '330', '4', '', '', '', '', '', '', '', '', '', '', '');
+insert into Tb_Produtos (Id, Nome_Produto, Descriçao, Id_Pedido, Id_Produto, Preço, Estoque, Quantidade_Pedidos, Responsavel, E_mail, DDD, Tel, Cel, Data_Pedido, Endereço, Bairro, Cidade, Uf, Cep) values ('17', 'HD Seagate 2TB BarraCuda, 3.5, SATA', 'Marca Seagate', '58595975', '5759856', '339.99', '55', '6', '', '', '', '', '', '', '', '', '', '', '');
+insert into Tb_Produtos (Id, Nome_Produto, Descriçao, Id_Pedido, Id_Produto, Preço, Estoque, Quantidade_Pedidos, Responsavel, E_mail, DDD, Tel, Cel, Data_Pedido, Endereço, Bairro, Cidade, Uf, Cep) values ('18', 'HD para Desktop Seagate Barracuda, 3.5", 2TB, Sata III', 'Marca Seagate', '78897949', '4759498', '370.80', '30', '3', '', '', '', '', '', '', '', '', '', '', '');
+
+UPDATE `produto`.`tb_produtos` SET `Responsavel` = 'Joao Vitor', `E_Mail` = 'joaoteste123@hotmail.com', `DDD` = '18', `Tel` = '35285130', `Cel` = '997805961', `Data_Pedido` = '2022-10-17', `Endereço` = '', `Bairro` = 'Vila Joaquin', `Cidade` = 'Adamantina', `Uf` = 'SP', `Cep` = '17800000' WHERE (`Id` = '2');
+update tb_produtos set Responsavel = 'Carla', E_Mail = 'carla.teste99@hotmail.com' where Id = 2;
+update tb_produtos set Data_Pedido = '2022-10-23' where Id = 2;
+update tb_produtos set Responsavel = 'Milena', E_Mail = 'milena.cena39@gmail.com', DDD = '18', Tel = '35998088', Cel = '997594961', Endereço = '', Bairro = 'Centro', Cidade = 'Lucelia', Uf = 'Sp', Cep = '17780000' where Id = '3';
+update tb_produtos set Responsavel = 'Carlos', E_Mail = 'carlos.teste02@gmail.com', DDD = '18', Tel = '35998088', Cel = '997064971', Endereço = '', Bairro = '', Cidade = 'Álvares Machado', Uf = 'SP', Cep = '19160000' where Id = '4';
+update tb_produtos set Responsavel = 'Daniela', E_Mail = 'daniela.teste07@gmail.br', DDD = '14', Tel = '', Cel = '997365771', Endereço = '', Bairro = 'Centro', Cidade = 'Bauru', Uf = 'SP', Cep = '17015030' where Id = '5';
+update tb_produtos set Responsavel = 'Daniel', E_Mail = 'daniela.teste027@hotmail.com.br', DDD = '14', Tel = '', Cel = '981034471', Endereço = '', Bairro = 'Palmital', Cidade = 'Marilia', Uf = 'SP', Cep = '17511110' where Id = '6';
+update tb_produtos set Responsavel = 'Amanda', E_Mail = 'amanda.teste012@hotmail.br', DDD = '18', Tel = '', Cel = '996035960', Endereço = '', Bairro = 'Centro', Cidade = 'Parapuã', Uf = 'SP', Cep = '17730000' where Id = '7';
+update tb_produtos set Responsavel = 'Andre', E_Mail = 'andre.teste022@gmail.br', DDD = '17', Tel = '', Cel = '976045909', Endereço = '', Bairro = 'Centro', Cidade = 'Paranapuã', Uf = 'SP', Cep = '15745000' where Id = '8';
+update tb_produtos set Responsavel = 'Andreia', E_Mail = 'andrei.teste02@hotmail.com', DDD = '14', Tel = '', Cel = '916036907', Endereço = '', Bairro = 'Centro', Cidade = 'Tupã', Uf = 'SP', Cep = '17600260' where Id = '9';
+update tb_produtos set Responsavel = 'Renata', E_Mail = 'resnatateste35@gmail.br', DDD = '18', Tel = '', Cel = '978067907', Endereço = '', Bairro = 'Vila Paraiso', Cidade = 'Osvaldo Cruz', Uf = 'SP', Cep = '17700000' where Id = '10';
+update tb_produtos set Responsavel = 'Jose', E_Mail = 'jose.teste338@hotmail.com', DDD = '17', Tel = '', Cel = '989035070', Endereço = '', Bairro = 'Vila Redentora', Cidade = 'São José do Rio Preto', Uf = 'SP', Cep = '15025210' where Id = '11';
+update tb_produtos set Responsavel = 'Mafalda', E_Mail = 'mafaldafrancis77@gmail.com', DDD = '18', Tel = '', Cel = '979836967', Endereço = '', Bairro = 'R Emilio Menezes', Cidade = 'Assis', Uf = 'SP', Cep = '19802100' where Id = '12';
+update tb_produtos set Responsavel = 'Pietro', E_Mail = 'pietro.frank12@hotmail.com', DDD = '18', Tel = '', Cel = '979066900', Endereço = '', Bairro = 'Vila Carvalho', Cidade = 'Araçatuba', Uf = 'SP', Cep = '16025295' where Id = '13';
+update tb_produtos set Responsavel = 'Pedro', E_Mail = 'pedrozic08@gmail.com', DDD = '18', Tel = '', Cel = '986075467', Endereço = '', Bairro = 'Centro', Cidade = 'Adamantina', Uf = 'SP', Cep = '17800000' where Id = '14';
+update tb_produtos set Responsavel = 'Maria', E_Mail = 'mariasesc07@hotmail.com', DDD = '14', Tel = '', Cel = '974065978', Endereço = '', Bairro = 'Vila Perino', Cidade = 'Ourinhos', Uf = 'SP', Cep = '19911723' where Id = '15';
+update tb_produtos set Responsavel = 'Rafael', E_Mail = 'rafael.carl11@hotmail.com', DDD = '18', Tel = '', Cel = '997585987', Endereço = '', Bairro = 'Vila Santa Helena', Cidade = 'Osvaldo Cruz', Uf = 'SP', Cep = '17700000' where Id = '16';
+update tb_produtos set Responsavel = 'Marcela', E_Mail = 'marcelagt334@gmail.com', DDD = '18', Tel = '', Cel = '976435970', Endereço = '', Bairro = 'Vila Ocidental', Cidade = 'Presidente Prudente', Uf = 'SP', Cep = '19015250' where Id = '17';
+update tb_produtos set Responsavel = 'Marcelo', E_Mail = 'marceloct99@gmail.com', DDD = '18', Tel = '', Cel = '986837908', Endereço = '', Bairro = 'Vila Geni', Cidade = 'Presidente Prudente', Uf = 'SP', Cep = '19023540' where Id = '18';
+update tb_produtos set Responsavel = 'Daniela', E_Mail = 'daniela.teste07@gmail.br',  DDD = '14', Cel = '997365771', Data_Pedido = '2022-10-24', Endereço = '', Bairro = 'Centro', Cidade = 'Bauru', Uf = 'SP', Cep = '17015030' where Id = '5';
+update tb_produtos set Data_Pedido = '2022-09-26', Bairro = 'Centro' where Id = '4';
+update tb_produtos set Data_Pedido = '2022-08-10' where Id = '6';
+update tb_produtos set Data_Pedido = '2022-07-07' where Id = '7';
+update tb_produtos set Data_Pedido = '2022-06-12' where Id = '8';
+update tb_produtos set Data_Pedido = '2022-05-08' where Id = '9';
+update tb_produtos set Data_Pedido = '2022-10-20' where Id = '10';
+update tb_produtos set Data_Pedido = '2022-04-25' where Id = '11';
+update tb_produtos set Data_Pedido = '2022-01-26' where Id = '12';
+update tb_produtos set Data_Pedido = '2022-02-30' where Id = '13';
+update tb_produtos set Data_Pedido = '2022-10-31' where Id = '14';
+update tb_produtos set Data_Pedido = '2022-08-08' where Id = '15';
+update tb_produtos set Data_Pedido = '2022-09-29' where Id = '16';
+update tb_produtos set Data_Pedido = '2022-05-01' where Id = '17';
+update tb_produtos set Data_Pedido = '2022-03-27' where Id = '18';
+
+select date_format('2022-10-20', '%d/%m/%Y');
+
+drop table tb_produtos; 
+
+select sum(Preço) as "Total Preço" from tb_produtos;
+	
+select sum(Preço) from tb_produtos;
+
+select avg(Preço) from tb_produtos;
+
+select max(Preço) from tb_produtos; 
+
+select count(Quantidade*Preço) from tb_produtos; 
+
+select sum(Quantidade * Preço) from tb_produtos where Preço;
+
+select Nome_Produto, format(Preço, 4) 
+	from tb_produtos 
+    where Preço > 150;
+
+select distinct Quantidade from tb_produtos; 
+
+alter table tb_produtos add Quantidade_Pedidos int(20);
+
+select AVG(DISTINCT Preço * Quantidade_Pedidos) from tb_produtos;
