@@ -1,0 +1,35 @@
+create database Portal_Aluno;
+
+create table Aluno (
+Nome varchar(30) not null,
+Ra int(10) not null,
+Curso varchar(30) not null,
+Turma varchar(5) not null, 
+Sem int (3),
+CPF int(11),
+Rg int (9),
+primary key(Ra, Sem, CPF, Rg)); 
+
+select * from aluno; 
+
+insert into aluno (Nome, Ra, Curso, Turma, Sem, CPF, Rg) values ('Joao Vitor', '0602267', 'Segurança da informaçao', '1', '2-Sem', '22292598900', '395291587');
+insert into aluno (Nome, Ra, Curso, Turma, Sem, CPF, Rg) values ('Juliana', '0702569', 'Analise e desinvolvimeto de sistema', '2', '1-Sem', '24292698901', '396297584'); 
+insert into aluno (Nome, Ra, Curso, Turma, Sem, CPF, Rg) values ('henrique', '0702368', 'Ciencia da Computaçao', '4', '4-Sem', '27892597903', '397281517');
+insert into aluno (Nome, Ra, Curso, Turma, Sem, CPF, Rg) values ('Carla', '0102498', 'Ciencia de Dados', '3', '5-Sem', '33282698301', '096271582');
+INSERT INTO `portal_aluno`.`aluno` (`Nome`, `Ra`, `Curso`, `Turma`, `Sem`, `CPF`, `Rg`) VALUES ('Juliana', '0702569', 'Analise e desinvolvimeto de sistema', '2', '1', '24292698901', '396297584');
+
+UPDATE `portal_aluno`.`aluno` SET `Curso` = 'Ciencia_Dados' WHERE (`Ra` = '102498') and (`Sem` = '5') and (`CPF` = '2147483647') and (`Rg` = '96271582');
+UPDATE `portal_aluno`.`aluno` SET `Curso` = 'Segurança_informaçao' WHERE (`Ra` = '602267') and (`Sem` = '2') and (`CPF` = '2147483647') and (`Rg` = '395291587');
+UPDATE `portal_aluno`.`aluno` SET `Curso` = 'Ciencia_Computaçao' WHERE (`Ra` = '702368') and (`Sem` = '4') and (`CPF` = '2147483647') and (`Rg` = '397281517');
+UPDATE `portal_aluno`.`aluno` SET `Curso` = 'Analise_desinvolvimeto_si' WHERE (`Ra` = '702569') and (`Sem` = '1') and (`CPF` = '2147483647') and (`Rg` = '396297584');
+ 
+drop table aluno;
+
+select Curso, Sem, Turma from aluno;
+
+select Nome, Ra, Curso, Rg, CPF from aluno; 
+
+UPDATE `portal_aluno`.`aluno` SET `Sem` = '5-Sem' WHERE (`Ra` = '102498') and (`Sem` = '5-Sem') and (`CPF` = '2147483647') and (`Rg` = '96271582');
+UPDATE `portal_aluno`.`aluno` SET `Sem` = '2-Sem' WHERE (`Ra` = '602267') and (`Sem` = '2-Sem') and (`CPF` = '2147483647') and (`Rg` = '395291587');
+UPDATE `portal_aluno`.`aluno` SET `Sem` = '4-Sem' WHERE (`Ra` = '702368') and (`Sem` = '4-Sem') and (`CPF` = '2147483647') and (`Rg` = '397281517');
+UPDATE `portal_aluno`.`aluno` SET `Sem` = '1-Sem' WHERE (`Ra` = '702569') and (`Sem` = '1-Sem') and (`CPF` = '2147483647') and (`Rg` = '396297584');
