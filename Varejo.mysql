@@ -1,0 +1,70 @@
+create database Varejo;
+
+create table Produtos(
+Id int not null,
+Nome_Funcionario varchar(20) not null,
+Sexo enum ('M', 'F'),
+Salario double not null,
+Nome_Produto varchar(20),
+Estoque int(100),
+Preço double not null,
+Desconto float,
+check (Preço > Desconto),
+primary key (Id));
+
+select * from produtos;
+
+insert into produtos set Nome_Funcionario = 'Joao Vitor', Sexo = 'M', Salario = '1250.99', Nome_Produto = 'Smart TV 65 Samsung Neo Qled, 8K', Estoque = '180', Preço = '12400.94', Desconto = '0.10';
+insert into produtos (Id, Nome_Funcionario, Sexo, Salario, Nome_Produto, Estoque, Preço, Desconto) values ('1', 'Joao Vitor', 'M', '1250.99', 'Smart TV 65 Samsung Neo Qled, 8K', '180', '12400.94', '0.10');
+insert into Produtos set Id = '2', Nome_Funcionario = 'Mario', Sexo = 'M', Salario = '2200.99', Nome_Produto = 'Notebook Asus AMD Ryzen 5-3500U, 8GB RAM, SSD 256GB', Estoque = '925', Preço = '2590.00', Desconto = '0.05';
+insert into Produtos set Id = '3', Nome_Funcionario = 'Maria', Sexo = 'F', Salario = '2800.99', Nome_Produto = 'Apple iPhone 13 Pro, 512GB', Estoque = '250', Preço = '11432.00', Desconto = '0.11';
+insert into produtos (Id, Nome_Funcionario, Sexo, Salario, Nome_Produto, Estoque, Preço, Desconto) values ('4', 'Mafalda', 'F', '3100.40', 'Placa de Video PNY NVIDIA Geforce RTX 3060Ti Dual Fan, 8GB GDDR6', '148', '2600.99', '0.07');
+insert into produtos set Id = '5', Nome_Funcionario = 'Carla', Sexo = 'F', Salario = '2901.70', Nome_Produto = 'Monitor Gamer LG 26 IPS, Ultra Wide, 75Hz', Estoque = '186', Preço = '900.00', Desconto = '0.37';
+insert into produtos set Id = '6', Nome_Funcionario = 'Carlos', Sexo = 'M', Salario = '3100.75', Nome_Produto = 'SSD 480 GB Crucial BX500, SATA', Estoque = '491', Preço = '219.99', Desconto = '0.05';
+insert into produtos (Id) values ('1');
+
+alter table produtos add Data_Pedido date;
+alter table produtos add Hora_Aquisiçao time;
+
+update produtos set Nome_Funcionario = 'Joao Vitor', Sexo = 'M', Salario = '1250.99', Nome_Produto = 'Smart TV 65 Samsung Neo Qled, 8K', Estoque = '180', Preço = '12400.94', Desconto = '0.10' where Id = '1';
+update produtos set Data_Pedido = '2022-11-04', Hora_Aquisiçao = '19:25:00' where Id = '1';
+update produtos set Data_Pedido = '2022-10-20', Hora_Aquisiçao = '14:30:01' where Id = '2';
+update produtos set Data_Pedido = '2022-09-30', Hora_Aquisiçao = '18:40:50' where Id = '3';
+update produtos set Data_Pedido = '2022-08-25', Hora_Aquisiçao = '17:25:00' where Id = '4';
+update produtos set Data_Pedido = '2022-07-07', Hora_Aquisiçao = '20:30:30' where Id = '5';
+update produtos set Data_Pedido = '2022-11-01', Hora_Aquisiçao = '21:35:05' where Id = '6';
+
+select sum(Preço - ((preço * 10) / 100)) FROM produtos;
+
+select sum(Preço) from produtos group by Nome_Produto; 
+
+select Nome_Produto, Desconto, format(Preço, 7) 
+	from produtos 
+    where Preço > 100
+    group by Nome_Produto, Desconto;
+
+select * from produtos; 
+
+select concat(Id) Id, Nome_Produto, Estoque, Preço, Desconto from produtos order by Id, Nome_Produto, Estoque, Preço, Desconto;  
+
+select now(); 
+
+select curdate();
+
+select Id, Sexo, Nome_Produto, Estoque, Preço, Desconto from produtos where Sexo = 'F'; 
+
+select concat('O', Nome_Produto, 'Está Disponivel', Estoque, 'com', Preço, 'e', Desconto, 'Imperdivel') as Nome_Produto from produtos order by Nome_Produto, Estoque, Preço, Desconto; 
+
+select Nome_Produto, Preço, Desconto, format(Preço/2, 1) from produtos where Id = '1';
+
+select Nome_Produto, Preço, Desconto, 1*Preço-10 from produtos where Id = '1';
+
+select Nome_Produto, Preço, Desconto, 12*(Preço-10) from produtos; 
+
+delete from produtos where Id = '0';
+
+alter table produtos add Nacionalidade varchar(20) default 'Brasil'; 
+alter table produtos add pais tinyint(3) unsigned not null;
+alter table produtos add Nome_Pais varchar(50) not null;
+
+alter table produtos drop column Nacionalidade;
